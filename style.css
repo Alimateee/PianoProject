@@ -1,0 +1,193 @@
+html {
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrap .header {
+  align-self: center;
+}
+.wrap .header .link-title {
+  text-decoration: none;
+  color: white;
+}
+.wrap .header .title {
+  text-decoration: none;
+  position: relative;
+}
+.wrap .header .title::before {
+  content: "";
+  position: absolute;
+  font-size: small;
+  right: 60%;
+  opacity: 0;
+  top: 25%;
+  width: 0;
+  color: black;
+  height: 20px;
+  transition: opacity 0.8s ease;
+}
+.wrap .header .title:hover::before {
+  content: "Go to my Reposetory in Github :)";
+  width: 310px;
+  color: rgb(123, 203, 235);
+  opacity: 1;
+}
+.wrap .header .title::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 2%;
+  right: 0%;
+  transition: width 0.5s ease;
+}
+.wrap .header .title:hover {
+  cursor: pointer;
+}
+.wrap .header .title:hover::after {
+  width: 100%;
+}
+.wrap .nowPlay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+}
+.wrap .nowPlay .currentPlay {
+  color: white;
+  margin-top: 1rem;
+  font-size: xx-large;
+  align-self: center;
+}
+.wrap .nowPlay .pianoKey {
+  align-self: center;
+  display: flex;
+  margin-top: 3rem;
+}
+.wrap .nowPlay .pianoKey .key {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: white;
+  margin-right: 0.5rem;
+  font-size: large;
+  height: 350px;
+  margin-bottom: 6rem;
+  width: 55px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+  z-index: 1;
+}
+.wrap .nowPlay .pianoKey .key .hint {
+  align-self: center;
+}
+.wrap .nowPlay .pianoKey .sharp {
+  background-color: black;
+  color: white;
+  height: 220px;
+  width: 40px;
+  border-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  padding: 0.3rem;
+  z-index: 2;
+}
+.wrap .nowPlay .pianoKey .WKey {
+  left: 27.5%;
+}
+.wrap .nowPlay .pianoKey .EKey {
+  left: 32.7%;
+}
+.wrap .nowPlay .pianoKey .TKey {
+  left: 42.95%;
+}
+.wrap .nowPlay .pianoKey .YKey {
+  left: 48.1%;
+}
+.wrap .nowPlay .pianoKey .UKey {
+  left: 53.3%;
+}
+.wrap .nowPlay .pianoKey .OKey {
+  left: 63.6%;
+}
+.wrap .nowPlay .pianoKey .PKey {
+  left: 68.7%;
+}
+.wrap .nowPlay .hint {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.wrap .nowPlay .pianoKey:hover .hint {
+  opacity: 1;
+}
+
+@media screen and (max-width: 425px) {
+  .wrap {
+    width: 26.5625rem;
+    display: flex;
+    justify-content: center;
+  }
+  .wrap .header {
+    font-size: small;
+  }
+  .wrap .nowPlay {
+    border: 0 !important;
+    display: flex;
+    align-items: center;
+  }
+  .wrap .nowPlay .pianoKey {
+    display: flex;
+  }
+  .wrap .nowPlay .key {
+    width: 15px !important;
+    height: 150px !important;
+  }
+  .wrap .nowPlay .key .hint {
+    font-size: small;
+  }
+  .wrap .nowPlay .sharp {
+    width: 15px !important;
+    height: 100px !important;
+  }
+  .wrap .nowPlay .WKey {
+    left: 11.4% !important;
+  }
+  .wrap .nowPlay .EKey {
+    left: 20.3% !important;
+  }
+  .wrap .nowPlay .TKey {
+    left: 38.8% !important;
+  }
+  .wrap .nowPlay .YKey {
+    left: 48.1% !important;
+  }
+  .wrap .nowPlay .UKey {
+    left: 57.3% !important;
+  }
+  .wrap .nowPlay .OKey {
+    left: 75.7% !important;
+  }
+  .wrap .nowPlay .PKey {
+    left: 84.9% !important;
+  }
+}
+.playing {
+  transform: scale(0.95);
+  border-color: aqua;
+  box-shadow: 0 0 1.5rem aqua;
+}
+
+/*# sourceMappingURL=style.css.map */

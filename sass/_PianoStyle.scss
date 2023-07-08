@@ -1,0 +1,193 @@
+html {
+    font-size: 100%;
+    font-family: sans-serif;
+}
+body {
+    background-color: black;
+}
+.wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .header {
+        align-self: center;
+        .link-title {
+            text-decoration: none;
+            color: white;
+        }
+        .title {
+            text-decoration: none;
+            position: relative;
+        }
+        .title::before {
+            content: '';
+            position: absolute;
+            font-size: small;
+            right: 60%;
+            opacity: 0;
+            top: 25%;
+            width: 0;
+            color: black;
+            height: 20px;
+            transition: opacity .8s ease;
+        }
+        .title:hover::before {
+            content: 'Go to my Reposetory in Github :)';
+            width: 310px;
+            color: rgb(123, 203, 235);
+            opacity: 1;
+        }
+        .title::after {
+            content: '';
+            background-color: white;
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: 2%;
+            right: 0%;
+            transition: width .5s ease;
+        }
+        .title:hover {
+            cursor: pointer;
+        }
+        .title:hover::after {
+            width: 100%;
+        }
+    }
+    .nowPlay {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid whitesmoke;
+        border-radius: 6px;
+        .currentPlay {
+            color: white;
+            margin-top: 1rem;
+            font-size: xx-large;
+            align-self: center;
+        }
+        .pianoKey {
+            align-self: center;
+            display: flex;
+            margin-top: 3rem;
+            .key {
+                display: flex;
+                flex-direction: column-reverse;
+                background-color: white;
+                margin-right: .5rem;
+                font-size: large;
+                height: 350px;
+                margin-bottom: 6rem;
+                width: 55px;
+                padding: .5rem;
+                border-radius: 4px;
+                transition: all .1s ease;
+                z-index: 1;
+                .hint {
+                    align-self: center;
+                }
+            }
+            .sharp {
+                background-color: black;
+                color: white;
+                height: 220px;
+                width : 40px;
+                border-radius: 0;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                position: absolute;
+                padding: .3rem;
+                z-index: 2;
+            }
+            .WKey {
+                left: 27.5%;
+            }
+            .EKey {
+                left: 32.7%;
+            }
+            .TKey {
+                left: 42.95%;
+            }
+            .YKey {
+                left: 48.1%;
+            }
+            .UKey {
+                left: 53.3%;
+            }
+            .OKey {
+                left: 63.6%;
+            }
+            .PKey {
+                left: 68.7%;
+            }
+        }
+        .hint {
+            display: block;
+            opacity: 0;
+            transition: opacity .3s ease-out;
+        }
+        .pianoKey:hover .hint {
+            opacity: 1; 
+        }
+    }
+}
+
+
+@media screen and (max-width : 425px) {
+    .wrap {
+        width: 26.5625rem;
+        display: flex;
+        justify-content: center;
+        .header {
+            font-size: small;
+        }
+        .nowPlay {
+            border : 0 !important;
+            display: flex;
+            align-items: center;
+            .pianoKey {
+                display: flex;
+            }
+            .key {
+                width : 15px !important;
+                height: 150px !important;
+                .hint {
+                    font-size: small;
+                }
+            }
+            .sharp {
+                width: 15px !important;
+                height: 100px !important;
+            }
+            .WKey {
+                left: 11.4% !important;
+            }
+            .EKey {
+                left: 20.3% !important;
+            }
+            .TKey {
+                left: 38.8% !important;
+            }
+            .YKey {
+                left: 48.1% !important;
+            }
+            .UKey {
+                left: 57.3% !important;
+            }
+            .OKey {
+                left: 75.7% !important;
+            }
+            .PKey {
+                left: 84.9% !important;
+            }
+        }
+    }
+    
+}
+
+
+.playing {
+    transform: scale(.95);
+    border-color: aqua;
+    box-shadow: 0 0 1.5rem aqua;
+}

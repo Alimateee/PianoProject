@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Piano</title>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <a class="link-title" href="https://github.com/Alimateee/Data/settings/pages" target="_blank"><h1 class="title">JavaScript Piano</h1></a>
+        </header>
+        <main class="nowPlay">
+            <div class="currentPlay"></div>
+            <div class="pianoKey">
+                <div data-key="KeyA" class="key" data-note="C">
+                    <span class="hint">A</span>
+                </div>
+                <div data-key="KeyW" class="key sharp WKey" data-note="C#">
+                    <span class="hint">W</span>
+                </div>
+                <div data-key="KeyS" class="key" data-note="D">
+                    <span class="hint">S</span>
+                </div>
+                <div data-key="KeyE" class="key sharp EKey" data-note="D#">
+                    <span class="hint">E</span>
+                </div>
+                <div data-key="KeyD" class="key" data-note="E">
+                    <span class="hint">D</span>
+                </div>
+                <div data-key="KeyF" class="key" data-note="F">
+                    <span class="hint">F</span>
+                </div>
+                <div data-key="KeyT" class="key sharp TKey" data-note="F#">
+                    <span class="hint">T</span>
+                </div>
+                <div data-key="KeyG" class="key" data-note="G">
+                    <span class="hint">G</span>
+                </div>
+                <div data-key="KeyY" class="key sharp YKey" data-note="G#">
+                    <span class="hint">Y</span>
+                </div>
+                <div data-key="KeyH" class="key" data-note="H">
+                    <span class="hint">H</span>
+                </div>
+                <div data-key="KeyU" class="key sharp UKey" data-note="I"> 
+                    <span class="hint">U</span>
+                </div>
+                <div data-key="KeyJ" class="key" data-note="I#">
+                    <span class="hint">J</span>
+                </div>
+                <div data-key="KeyK" class="key" data-note="J">
+                    <span class="hint">K</span>
+                </div>
+                <div data-key="KeyO" class="key sharp OKey" data-note="J#">
+                    <span class="hint">O</span>
+                </div>
+                <div data-key="KeyL" class="key" data-note="K">
+                    <span class="hint">L</span>
+                </div>
+                <div data-key="KeyP" class="key sharp PKey" data-note="L">
+                    <span class="hint">P</span>
+                </div>
+                <div data-key="Semicolon" class="key" data-note="M">
+                    <span class="hint">;</span>
+                </div>
+            
+            </div>
+            <audio data-key="KeyA" src="./static/040.wav"></audio>
+            <audio data-key="KeyW" src="./static/041.wav"></audio>
+            <audio data-key="KeyS" src="./static/042.wav"></audio>
+            <audio data-key="KeyE" src="./static/043.wav"></audio>
+            <audio data-key="KeyD" src="./static/044.wav"></audio>
+            <audio data-key="KeyF" src="./static/045.wav"></audio>
+            <audio data-key="KeyT" src="./static/046.wav"></audio>
+            <audio data-key="KeyG" src="./static/047.wav"></audio>
+            <audio data-key="KeyY" src="./static/048.wav"></audio>
+            <audio data-key="KeyH" src="./static/049.wav"></audio>
+            <audio data-key="KeyU" src="./static/050.wav"></audio>
+            <audio data-key="KeyJ" src="./static/051.wav"></audio>
+            <audio data-key="KeyK" src="./static/052.wav"></audio>
+            <audio data-key="KeyO" src="./static/053.wav"></audio>
+            <audio data-key="KeyL" src="./static/054.wav"></audio>
+            <audio data-key="KeyP" src="./static/055.wav"></audio>
+            <audio data-key="Semicolon" src="./static/056.wav"></audio>
+        </main>
+        
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>
